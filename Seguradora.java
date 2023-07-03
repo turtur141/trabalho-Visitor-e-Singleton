@@ -1,9 +1,8 @@
 public final class Seguradora {
-    
     private Seguradora() {
         this.renda = 10000.0;
-        Vendedor v = new Vendedor("Artur");
-        Acionador a = new Acionador("Guilherme");
+        this.v = new Vendedor("Artur",this);
+        this.a = new Acionador("Guilherme",this);
         this.vlSeguroAutomovel = 3600;
         this.vlSeguroDanosMeiosAmbiente = 3000;
         this.vlSeguroEstagiario = 200;
@@ -14,12 +13,13 @@ public final class Seguradora {
         this.vlSeguroSaude = 7200;
         this.vlSeguroTerceiros = 500;
         this.vlSeguroResponCivil = 1500;
+        this.vlSeguroVida = 1800;
     }
 
     private static Seguradora s = null;
-    private double renda;
     private Vendedor v;
     private Acionador a;
+    private double renda;
     private double vlSeguroAutomovel;
     private double vlSeguroDanosMeiosAmbiente;
     private double vlSeguroEstagiario;
@@ -30,6 +30,7 @@ public final class Seguradora {
     private double vlSeguroSaude;
     private double vlSeguroTerceiros;
     private double vlSeguroResponCivil;
+    private double vlSeguroVida;
     public double getRenda() {
         return renda;
     }
@@ -41,10 +42,11 @@ public final class Seguradora {
     public void setRenda(double renda) {
         this.renda = renda;
     }
-    public Vendedor getV() {
+
+    public Vendedor getVendedor() {
         return v;
     }
-    public Acionador getA() {
+    public Acionador getAcionador() {
         return a;
     }
     public double getVlSeguroAutomovel() {
@@ -106,6 +108,12 @@ public final class Seguradora {
     }
     public void setVlSeguroResponCivil(double vlSeguroResponCivil) {
         this.vlSeguroResponCivil = vlSeguroResponCivil;
+    }
+    public double getVlSeguroVida() {
+        return vlSeguroVida;
+    }
+    public void setVlSeguroVida(double vlSeguroVida) {
+        this.vlSeguroVida = vlSeguroVida;
     }
 
 }
