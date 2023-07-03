@@ -38,15 +38,15 @@ public class Residencia implements Local{
         this.qtdPessoas = qtdPessoas;
     }
 
-    public boolean isTemSeguroMoradia() {
+    public boolean temSeguroMoradia() {
         return seguroMoradia;
     }
 
-    public void setTemSeguroMoradia(boolean seguroMoradia) {
+    public void setSeguroMoradia(boolean seguroMoradia) {
         this.seguroMoradia = seguroMoradia;
     }
 
-    public boolean seguroAutomovel() {
+    public boolean temSeguroAutomovel() {
         return seguroAutomovel;
     }
 
@@ -54,7 +54,7 @@ public class Residencia implements Local{
         this.seguroAutomovel = seguroAutomovel;
     }
 
-    public int getSeguroVida() {
+    public int qtdSeguroVida() {
         return qtdSeguroVida;
     }
 
